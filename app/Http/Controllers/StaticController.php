@@ -6,19 +6,19 @@ use Illuminate\Http\Request;
 
 class StaticController extends Controller
 {
-    public function index(){
-        return "<h1>Index Page</h1>";
+    public function Home(){
+        return view('Home');
     }
 
-    public function about(){
-        return "<h1>About Page</h1>";
+    public function About(){
+        return view('About');
     }
 
-    public function portfolio(){
-        return "<h1>Portfolio Page</h1>";
+    public function Portfolio(){
+        return view('Portfolio');
     }
 
-    public function contact(){
-        return "<h1>Contact Page</h1>";
+    public function Contact(){
+        return view('Contact');
     }
 }
