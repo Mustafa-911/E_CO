@@ -13,7 +13,7 @@ use App\Http\Controllers\StaticController;
 |
 */
 
-Route::get('/', [StaticController::class , 'Home']);
-Route::get('/About', [StaticController::class , 'About']);
-Route::get('/Portfolio', [StaticController::class , 'Portfolio']);
-Route::get('/Contact', [StaticController::class , 'Contact']);
+Route::get('/', [StaticController::class , 'Home'])->name('Home.index');
+Route::get('/About', [StaticController::class , 'About'])->name('Home.About');
+Route::get('/Portfolio', [StaticController::class , 'Portfolio'])->name('Home.Portfolio');
+Route::get('/Contact', [StaticController::class , 'Contact'])->name('Home.Contact');

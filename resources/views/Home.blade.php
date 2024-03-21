@@ -1,4 +1,5 @@
 @extends('Layout')
+@section('T-Content' , 'Home')
 
 @section('Content')
 
