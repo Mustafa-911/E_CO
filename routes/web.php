@@ -15,5 +15,7 @@ use App\Http\Controllers\StaticController;
 
 Route::get('/', [StaticController::class , 'Home'])->name('Home.index');
 Route::get('/About', [StaticController::class , 'About'])->name('Home.About');
-Route::get('/Portfolio', [StaticController::class , 'Portfolio'])->name('Home.Portfolio');
+Route::get('/Show', [StaticController::class , 'Show'])->name('Home.Show');
 Route::get('/Contact', [StaticController::class , 'Contact'])->name('Home.Contact');
+Route::get('/Create', [StaticController::class , 'Create'])->name('Home.Create');
+Route::get('/index', [StaticController::class , 'Index'])->name('Home.Index');

@@ -14,11 +14,17 @@ class StaticController extends Controller
         return view('About');
     }
 
-    public function Portfolio(){
-        return view('Portfolio');
+    public function Show(){
+        return view('Show');
     }
 
     public function Contact(){
         return view('Contact');
+    }
+    public function Create(){
+        return view('computers.Create');
+    }
+    public function index(){
+        return view('computers.index');
     }
 }
