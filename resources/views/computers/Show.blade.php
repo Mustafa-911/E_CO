@@ -1,3 +1,4 @@
+
 @extends('Layout')
 @section('T-Content' , 'Show')
 
@@ -8,7 +9,7 @@
         <h1>Computers</h1>
     </div>
     <div class="mt-8">
-        <p>{{ $computer['name'] }} ({{ $computer['Origin'] }} ) {{ $computer['Price'] }} $ </p>
+        {{ route('Home.res') }}
     </div>
 </div>
 

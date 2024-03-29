@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Computer;
 
-class ComputersController extends Controller
+class ComputresController extends Controller
 {
-
     public function index()
     {
-        return view('computers.index' , [
-            'computers' => Computer::all()
-        ]);
+        return DB::select("select * from computers");
     }
 
 
     public function create()
     {
+
         return view('computers.create');
     }
 
@@ -25,24 +24,15 @@ class ComputersController extends Controller
     public function store(Request $request)
     {
         $computer = new Computer();
-
-        $computer->name = $request->input('computer-Name');
-        $computer->Origin = $request->input('computer-Origin');
-        $computer->Price = $request->input('computer-Price');
-
-        $computer ->save();
-
-        return redirect()->route('computers.index');
     }
 
 
     public function show($computer)
     {
-    return view('computers.show', [
-        'computer' => $computer::findOrFaill($computer)
-    ]);
-
-}
+        return view('computers.show', [
+            'computer' => $computer::findOrFaill($computer)
+        ]);
+    }
 
 
     public function edit(string $id)

@@ -15,7 +15,7 @@ class StaticController extends Controller
     }
 
     public function Show(){
-        return view('Show');
+        return view('computers.Show');
     }
 
     public function Contact(){
